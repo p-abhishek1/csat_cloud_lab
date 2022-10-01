@@ -17,3 +17,20 @@ app.get('/', function (req, res) {
 app.listen(process.env.PORT  || SERVER_PORT, () => {
     console.log(`Server running at http://${SERVER_HOST}:${SERVER_PORT}/`);
 })
+
+//http://localhost:3000/profile
+app.post('/profile', (req, res) => {
+    console.log(req.body)
+    res.json(req.body)
+  })
+  
+  //http://localhost:3000/admin
+  app.get('/admin', (req, res) => {
+    res.send('Admin Homepage')
+  })
+  
+  //http://localhost:3000/user/100
+  app.get("/user/:id", (req, res)=> {
+        res.send(`User ID: ${req.params.id}`);
+      }
+  )
