@@ -11,7 +11,10 @@ app.use(express.urlencoded()) // for parsing application/x-www-form-urlencoded
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
-    res.send("<h1>Home Page Abhishek Patangay -C0827603</h1>")
+    res.send("<h1>Home Page Enter StudentID /</h1>")
+})
+app.get('/C0827603', function (req, res) {
+  res.send("<h1>Abhishek Patangay -C0827603</h1>")
 })
 
 app.listen(process.env.PORT  || SERVER_PORT, () => {
