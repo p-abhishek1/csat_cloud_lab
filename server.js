@@ -13,8 +13,14 @@ app.use(express.urlencoded()) // for parsing application/x-www-form-urlencoded
 app.get('/', function (req, res) {
     res.send("<h1>Home Page Enter StudentID /</h1>")
 })
+
+//sends student id endpoint route
 app.get('/C0827603', function (req, res) {
   res.send("<h1>Abhishek Patangay -C0827603</h1>")
+})
+
+app.get('/location', function (req, res) {
+  res.send("<h1>Canada</h1>")
 })
 
 app.listen(process.env.PORT  || SERVER_PORT, () => {
