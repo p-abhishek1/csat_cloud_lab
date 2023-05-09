@@ -1,0 +1,9 @@
+following:
+
+$ git rebase feature_x
+
+Alternatively, we can fetch, merge and then stack your changes on top, all in one command as below:
+
+$ git pull — rebase
+
+Another great use of rebasing is just rewriting commit messages. To get an interactive text editor for the most recent commit, do the following:
